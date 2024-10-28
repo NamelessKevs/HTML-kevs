@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KevsWeb Portfolio</title>
+        <link rel="icon" href="img/logo.png" /> <!-- Ensure this path is correct -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="css/app.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
+<body class="font-sans antialiased bg-gray-800">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center text-white transition-opacity duration-1000 ease-in-out bg-gray-800">
+        <div class="relative flex items-center justify-center w-64 h-64 mb-4">
+            <div class="absolute w-full h-full border-8 border-t-8 border-b-teal-500 border-t-green-800 animate-spin rounded-full"></div>
+            <img src="img/loading-scream.png" alt="KevsWeb Logo" class="w-40 h-40">
+        </div>
+    
+        <p id="random-text" class="mt-2 text-lg text-gray-300"></p>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="fixed top-0 z-30 w-full px-5 py-6 font-mono text-2xl text-gray-200 bg-gray-700 shadow-xl bg-opacity-30 backdrop-blur-lg" x-data="{ open: false }">
+            <div class="flex items-center justify-between">
+                <div class="inline-flex items-center pl-[5%]">
+                    <img src="img/logo.png" alt="KevsWeb Logo" class="w-10 h-10">
+                    <b class="text-4xl">KRT</b>
+                </div>
+                <!-- Burger button for medium screens -->
+                <div class="lg:hidden">
+                    <button @click="open = !open" class="relative px-5 py-2 text-base text-white hover:scale-150 focus:outline-none">
+                        &#9776; <!-- Hamburger Icon -->
+                    </button>
+                </div>
+        
+                <div class="hidden lg:flex justify-evenly">
+                    <a href="#main-content">
+                        <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                            <span class="button-text">Home&nbsp;</span>
+                            <span class="bg-transition"></span>
+                            <span class="button-icon"><i class="fa-solid fa-house" style="color: darkgray;"></i></span>
+                        </button>
+                    </a>
+                    <a href="#aboutme">
+                        <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                            <span class="button-text">About Me&nbsp;</span>
+                            <span class="bg-transition"></span>
+                            <span class="button-icon"><i class="fa-solid fa-user" style="color: limegreen;"></i></span>
+                        </button>
+                    </a>
+                    <a href="#education">
+                        <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                            <span class="button-text">Education&nbsp;</span>
+                            <span class="bg-transition"></span>
+                            <span class="button-icon"><i class="fa-solid fa-graduation-cap" style="color: rgb(72, 161, 190);"></i></span>
+                        </button>
+                    </a>
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Experience&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-regular fa-star" style="color: darkorange;"></i></span>
+                    </button>
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Projects&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-solid fa-diagram-project" style="color: green;"></i></span>
+                    </button>
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Contact&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-solid fa-phone-flip" style="color: rgb(0, 139, 139);"></i></span>
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Dropdown for burger menu -->
+            <div x-show="open" 
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="transform opacity-0 translate-y-[-5%]"
+                x-transition:enter-end="transform opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="transform opacity-100 translate-y-0"
+                x-transition:leave-end="transform opacity-0 translate-y-[-5%]"
+                class="absolute z-10 h-32 px-6 mt-4 overflow-y-auto bg-gray-700 rounded-lg shadow-lg md:h-auto right-5 top-16 bg-opacity-70 backdrop-blur-lg lg:hidden">
+                <div class="flex flex-col p-2 gap-y-1">
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Home&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-solid fa-house" style="color: darkgray;"></i></span>
+                    </button>
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">About Me&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-solid fa-user" style="color: limegreen;"></i></span>
+                    </button>
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Education&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-solid fa-graduation-cap" style="color: rgb(72, 161, 190);"></i></span>
+                    </button>
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Experience&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-regular fa-star" style="color: darkorange;"></i></span>
+                    </button>
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Projects&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-solid fa-diagram-project" style="color: green;"></i></span>
+                    </button>
+                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Contact&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-solid fa-phone-flip" style="color: rgb(0, 139, 139);"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="background">
+        <div class="flex-row hidden justify-evenly sm:flex opacity-10 bgfloat">
+
+            <div class="flex flex-row mt-[70%] md:mt-[20%]">
+                <div class="pt-[60%]">
+                    <div class="relative z-10 w-10 h-10 bg-gray-200 shadow-xl md:w-20 md:h-20 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-10 h-10 bg-teal-400 md:w-20 md:h-20 left-2 md:left-6 bottom-8 md:bottom-16 bgspin rounded-xl">
+                    </div>
+                </div>
+                <div class="md:pl-[2%] relative z-10 pt-[40%] md:pt-[18%]">
+                    <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-6 h-6 bg-teal-400 md:w-10 md:h-10 left-2 bottom-6 bgspin rounded-xl">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flex flex-row mt-[40%] md:mt-[10%]">
+                <div class="pr-[10%] relative z-10 pt-[10%]">
+                    <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-6 h-6 bg-teal-400 md:w-10 md:h-10 left-2 bottom-6 bgspin rounded-xl">
+                    </div>
+                </div>
+                <div class="pt-[10%]">
+                    <div class="relative z-10 w-10 h-10 bg-teal-400 shadow-xl md:w-20 md:h-20 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-10 h-10 bg-gray-200 md:w-20 md:h-20 left-2 md:left-6 bottom-8 md:bottom-16 bgspin rounded-xl">
+                    </div>
+                </div>
+                <div class="pl-[2%] relative z-10 pt-[18%]">
+                    <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-6 h-6 bg-teal-400 md:w-10 md:h-10 left-2 bottom-6 bgspin rounded-xl">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flex flex-row mt-[80%] md:mt-[30%]">
+                <div class="pr-[10%] relative z-10 pt-[10%]">
+                    <div class="relative z-10 w-16 h-16 bg-gray-200 shadow-xl md:w-32 md:h-32 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-12 h-12 bg-teal-400 md:w-24 md:h-24 right-4 bottom-8 md:right-8 md:bottom-14 bgspin rounded-xl">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flex flex-row mt-[65%] md:mt-[15%]">
+                <div class="pr-[3%] relative z-10 pt-[40%]">
+                    <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-6 h-6 bg-teal-400 md:w-10 md:h-10 left-2 bottom-6 bgspin rounded-xl">
+                    </div>
+                </div>
+                <div class="pt-[30%]">
+                    <div class="relative z-10 w-10 h-10 bg-teal-400 shadow-xl md:w-20 md:h-20 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-10 h-10 bg-gray-200 md:w-20 md:h-20 left-2 md:left-6 bottom-8 md:bottom-16 bgspin rounded-xl">
+                    </div>
+                </div>
+                <div class="relative z-10 pt-[18%]">
+                    <div class="relative z-10 w-6 h-6 bg-teal-400 shadow-xl md:w-10 md:h-10 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-6 h-6 bg-gray-200 md:w-10 md:h-10 left-2 bottom-6 bgspin rounded-xl">
+                    </div>
+                </div>
+                <div class="relative z-10 pt-[30%]">
+                    <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-6 h-6 bg-teal-400 md:w-10 md:h-10 left-2 bottom-6 bgspin rounded-xl">
+                    </div>
+                </div>
+                <div class="pt-[10%]">
+                    <div class="relative z-10 w-10 h-10 bg-gray-200 shadow-xl md:w-20 md:h-20 bgspin rounded-xl">
+                    </div>
+                    <div class="relative w-10 h-10 bg-teal-400 md:w-20 md:h-20 left-2 md:left-6 bottom-8 md:bottom-16 bgspin rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content" class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-28">
+        <div id="main-content" class="grid mb-[10%] grid-cols-2 main-content-section">
+            <div class="pt-[20%] space-y-4 pl-[2%]">
+                <h1 class="text-6xl font-extrabold text-white animate-up">
+                    <b>Kevin</b> <b class="text-teal-500">Rey</b> <b>S.</b> <b class="text-teal-500">Talisic</b>
+                </h1>
+                <p class="text-2xl font-semibold text-white animate-up">A web developer.</p>
+                <p class="text-base font-thin text-white animate-up">
+                    A Filipino programmer with a Bachelor of Science in Computer Science<br>
+                    from Cavite State University - Carmona Campus, graduated in 2024.<br>
+                    Committed to continuous learning and growth in the field of programming.<br>
+                </p>
+                <div class="p-1 border-2 border-teal-500 animate-up rounded-xl w-max">
+                    <a href="#aboutme">
+                        <button class="relative px-5 py-2 text-base text-white rounded-xl hover:text-gray-800 group">
+                            <span class="button-text">Next Page&nbsp;</span>
+                            <span class="bg-transition"></span>
+                            <span class="button-icon"><i class="fa-solid fa-right-long" style="color: teal;"></i></i></span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center animate-up">
+                <img src="img/maincontent.png" alt="KevsWeb Logo" class="w-96 h-120"> 
+            </div>
+        </div>
+        
+        <div id="aboutme" class="grid grid-cols-2 animate-up main-content-section">
+            <div>&nbsp;</div>
+            <div class="pt-[18%] space-y-4 mb-[20%] pl-[10%]">
+                <h1 class="text-6xl font-extrabold text-white">
+                    <b>About</b> <b class="text-teal-300">Me</b>
+                </h1>
+                <p class="text-2xl font-semibold text-white">Here is my basic personal information.</p>
+                <table class="text-base font-thin text-white">
+                    <tr>
+                        <td><strong class="py-2 pr-5">Name:</strong></td>
+                        <td class="py-2">Kevin Rey S. Talisic</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="py-2 pr-5">Birth of date:</strong></td>
+                        <td class="py-2">05-02-2002</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="py-2 pr-5">Sex:</strong></td>
+                        <td class="py-2">Male</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="py-2 pr-5">Address:</strong></td>
+                        <td class="py-2">GMA Cavite</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="py-2 pr-5">Citizenship:</strong></td>
+                        <td class="py-2">Filipino</td>
+                    </tr>
+                </table>
+                <div class="p-1 border-2 border-white rounded-xl w-max">
+                    <button class="relative px-5 py-2 text-base text-white rounded-xl hover:text-gray-800 group">
+                        <span class="button-text">Next Page&nbsp;</span>
+                        <span class="bg-transition"></span>
+                        <span class="button-icon"><i class="fa-solid fa-house" style="color: darkgray;"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="education" class="mx-auto main-content-section">
+            <div class="pt-[18%] space-y-4 mb-[20%]">
+                <h1 class="w-full text-6xl font-extrabold text-center text-white animate-up">
+                    <b>My</b> <b class="text-teal-300">Education Attainment</b>
+                </h1>
+                <div class="grid md:grid-rows-4 animate-up lg:grid-cols-2 xl:grid-cols-4">
+                    <div class="flex items-center my-5 justify-center w-48 mx-auto bg-teal-300 h-72 rounded-xl">
+                        <button class="relative pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
+                            <span class="hideme">Elementary&nbsp;</span><br>
+                            <span class="bg-transition"><img src="img/college.jpg" alt="KevsWeb Logo" class="z-20 w-full h-full"> </span>
+                            <span class="relative z-30 ml-5 text-center highlighted-text top-8 button-icon">Graduated:2014<br><i class="text-xs">Learner Centered Christian School</i></span>
+                        </button>
+                    </div>
+                    <div class="flex items-center my-5 justify-center w-48 mx-auto bg-teal-300 h-72 rounded-xl">
+                        <button class="relative pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
+                            <span class="hideme">Junior High School&nbsp;</span><br>
+                            <span class="bg-transition"><img src="img/college.jpg" alt="KevsWeb Logo" class="z-20 w-full h-full"> </span>
+                            <span class="relative z-30 pl-1 ml-5 text-center highlighted-text top-8 button-icon">Graduated:2018<br><i class="text-xs">General Mariano Alvarez Technical High School</i></span>
+                        </button>
+                    </div>
+                    <div class="flex items-center my-5 justify-center w-48 mx-auto bg-teal-400 h-72 rounded-xl">
+                        <button class="relative pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
+                            <span class="hideme">Senior High School&nbsp;</span><br>
+                            <span class="bg-transition"><img src="img/college.jpg" alt="KevsWeb Logo" class="z-20 w-full h-full"> </span>
+                            <span class="relative z-30 pl-1 ml-5 text-center highlighted-text top-8 button-icon">Graduated:2020<br><i class="text-xs">Asian Institute of Computer Studies</i></span>
+                        </button>
+                    </div>
+                    <div class="flex items-center my-5 justify-center w-48 mx-auto bg-teal-500 h-72 rounded-xl">
+                        <button class="relative pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
+                            <span class="hideme">College&nbsp;</span><br>
+                            <span class="bg-transition"><img src="img/college.jpg" alt="KevsWeb Logo" class="z-20 w-full h-full"> </span>
+                            <span class="relative z-30 pl-1 ml-5 text-center highlighted-text top-8 button-icon">Graduated:2024<br><i class="text-xs">Cavite State University - Carmona Campus</i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            const loadingScreen = document.getElementById('loading-screen');
+    
+            setTimeout(function () {
+                loadingScreen.classList.add('fade-out');
+    
+                setTimeout(function () {
+                    loadingScreen.style.display = 'none';
+                    setupIntersectionObserver();
+                }, 1000);
+            }, 5000);
+    
+            function setupIntersectionObserver() {
+                const observerOptions = {
+                    root: null,
+                    threshold: 0.1
+                };
+    
+                const observerCallback = function(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in');
+                            entry.target.querySelectorAll('.animate-up').forEach(text => {
+                                text.classList.add('start-animation');
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                };
+    
+                const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+                document.querySelectorAll('.main-content-section').forEach(section => {
+                    observer.observe(section);
+                });
+            }
+        });
+
+        const randomTexts = [
+            "Preparing something awesome...",
+            "Hang tight! It's almost ready...",
+            "Building the magic for you...",
+            "Just a moment, getting things ready...",
+            "Almost there, hold on tight!",
+            "Planning, Designing, Coding, DEVELOPING!"
+        ];
+
+        window.addEventListener('load', () => {
+            const randomText = randomTexts[Math.floor(Math.random() * randomTexts.length)];
+            document.getElementById('random-text').textContent = randomText;
+        });
+    </script>
+      
+</body>
+</html>
