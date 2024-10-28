@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KevsWeb Portfolio</title>
+        <title>KRT</title>
         <link rel="icon" href="img/logo.png" /> <!-- Ensure this path is correct -->
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="css/app.css" rel="stylesheet">
@@ -24,11 +24,11 @@
 
     <!-- Header Section -->
     <header>
-        <div class="fixed top-0 z-30 w-full px-5 py-6 font-mono text-2xl text-gray-200 bg-gray-700 shadow-xl bg-opacity-30 backdrop-blur-lg" x-data="{ open: false }">
+        <div class="fixed top-0 z-30 w-full px-2 md:px-5 py-3 md:py-6 font-mono text-2xl text-gray-200 bg-gray-700 shadow-xl bg-opacity-30 backdrop-blur-lg" x-data="{ open: false }">
             <div class="flex items-center justify-between">
                 <div class="inline-flex items-center pl-[5%]">
-                    <img src="img/logo.png" alt="KevsWeb Logo" class="w-10 h-10">
-                    <b class="text-4xl">KRT</b>
+                    <img src="img/logo.png" alt="KevsWeb Logo" class="w-6 h-6 md:w-10 md:h-10">
+                    <b class="text-lg md:text-4xl">KRT</b>
                 </div>
                 <!-- Burger button for medium screens -->
                 <div class="lg:hidden">
@@ -321,7 +321,7 @@
                     loadingScreen.style.display = 'none';
                     setupIntersectionObserver();
                 }, 1000);
-            }, 5000);
+            }, 100);
     
             function setupIntersectionObserver() {
                 const observerOptions = {
