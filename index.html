@@ -85,7 +85,7 @@
                 x-transition:leave="transition ease-in duration-300"
                 x-transition:leave-start="transform opacity-100 translate-y-0"
                 x-transition:leave-end="transform opacity-0 translate-y-[-5%]"
-                class="absolute z-10 h-32 px-6 mt-4 overflow-y-auto bg-gray-700 rounded-lg shadow-lg md:h-auto right-5 top-16 bg-opacity-70 backdrop-blur-lg lg:hidden">
+                class="absolute z-10 h-60 px-6 mt-4 overflow-y-auto bg-gray-700 rounded-lg shadow-lg md:h-auto right-5 top-16 bg-opacity-70 backdrop-blur-lg lg:hidden">
                 <div class="flex flex-col p-2 gap-y-1">
                     <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
                         <span class="button-text">Home&nbsp;</span>
@@ -113,7 +113,7 @@
                         <span class="button-icon"><i class="fa-solid fa-diagram-project" style="color: green;"></i></span>
                     </button>
                     <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
-                        <span class="button-text">Contact Me&nbsp;</span>
+                        <span class="button-text">Contact&nbsp;</span>
                         <span class="bg-transition"></span>
                         <span class="button-icon"><i class="fa-solid fa-phone-flip" style="color: rgb(0, 139, 139);"></i></span>
                     </button>
@@ -123,9 +123,9 @@
     </header>
 
     <div class="background">
-        <div class="flex-row hidden justify-evenly sm:flex opacity-10 bgfloat">
+        <div class="flex-row justify-evenly pt-[20%] md:pt-0 flex opacity-10 bgfloat">
 
-            <div class="flex flex-row mt-[70%] md:mt-[20%]">
+            <div class="flex flex-row mt-[40%] md:mt-[20%]">
                 <div class="pt-[60%]">
                     <div class="relative z-10 w-10 h-10 bg-gray-200 shadow-xl md:w-20 md:h-20 bgspin rounded-xl">
                     </div>
@@ -140,7 +140,7 @@
                 </div>
             </div>
         
-            <div class="flex flex-row mt-[40%] md:mt-[10%]">
+            <div class="flex flex-row mt-[80%] md:mt-[10%]">
                 <div class="pr-[10%] relative z-10 pt-[10%]">
                     <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl">
                     </div>
@@ -161,7 +161,7 @@
                 </div>
             </div>
         
-            <div class="flex flex-row mt-[80%] md:mt-[30%]">
+            <div class="flex flex-row mt-[10%] md:mt-[30%]">
                 <div class="pr-[10%] relative z-10 pt-[10%]">
                     <div class="relative z-10 w-16 h-16 bg-gray-200 shadow-xl md:w-32 md:h-32 bgspin rounded-xl">
                     </div>
@@ -170,7 +170,7 @@
                 </div>
             </div>
         
-            <div class="flex flex-row mt-[65%] md:mt-[15%]">
+            <div class="flex flex-row mt-[98%] md:mt-[15%]">
                 <div class="pr-[3%] relative z-10 pt-[40%]">
                     <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl">
                     </div>
@@ -206,20 +206,20 @@
     </div>
 
     <div id="main-content" class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-28">
-        <div id="main-content" class="grid mb-[10%] grid-cols-2 main-content-section">
-            <div class="pt-[20%] space-y-4 pl-[2%]">
-                <h1 class="text-6xl font-extrabold text-white animate-up">
+        <div id="main-content" class="grid mb-[1px] md:mb-[10%] grid-cols-2 main-content-section">
+            <div class="pt-[20%] space-y-1 md:space-y-4 pl-[2%]">
+                <h1 class="text-base lg:text-6xl font-extrabold text-white animate-up">
                     <b>Kevin</b> <b class="text-teal-500">Rey</b> <b>S.</b> <b class="text-teal-500">Talisic</b>
                 </h1>
-                <p class="text-2xl font-semibold text-white animate-up">A web developer.</p>
-                <p class="text-base font-thin text-white animate-up">
+                <p class="text-[8px] md:text-2xl font-semibold text-white animate-up">A web developer.</p>
+                <p id="aboutme" class="text-[5px] md:text-base font-thin text-white animate-up">
                     A Filipino programmer with a Bachelor of Science in Computer Science<br>
                     from Cavite State University - Carmona Campus, graduated in 2024.<br>
                     Committed to continuous learning and growth in the field of programming.<br>
                 </p>
-                <div class="p-1 border-2 border-teal-500 animate-up rounded-xl w-max">
-                    <a href="#aboutme">
-                        <button class="relative px-5 py-2 text-base text-white rounded-xl hover:text-gray-800 group">
+                <div class="p-[3px] md:p-1 border-2 border-teal-500 animate-up rounded-xl w-max">
+                    <a class="flex items-center" href="#aboutme">
+                        <button class="relative px-4 py-1 md:px-5 md:py-2 text-[6px] md:text-base text-white rounded-xl hover:text-gray-800 group">
                             <span class="button-text">Next Page&nbsp;</span>
                             <span class="bg-transition"></span>
                             <span class="button-icon"><i class="fa-solid fa-right-long" style="color: teal;"></i></i></span>
@@ -232,76 +232,78 @@
             </div>
         </div>
         
-        <div id="aboutme" class="grid grid-cols-2 animate-up main-content-section">
+        <div class="grid grid-cols-2 animate-up main-content-section">
             <div>&nbsp;</div>
-            <div class="pt-[18%] space-y-4 mb-[20%] pl-[10%]">
-                <h1 class="text-6xl font-extrabold text-white">
+            <div class="pt-[2%] md:pt-[18%] space-y-4 mb-[20%] pl-0 md:pl-[10%]">
+                <h1 class="text-lg lg:text-6xl font-extrabold text-white">
                     <b>About</b> <b class="text-teal-300">Me</b>
                 </h1>
-                <p class="text-2xl font-semibold text-white">Here is my basic personal information.</p>
-                <table class="text-base font-thin text-white">
+                <p class="text-[8px] md:text-2xl font-semibold text-white">Here is my basic personal information.</p>
+                <table class="text-[5px] md:text-base font-thin text-white">
                     <tr>
-                        <td><strong class="py-2 pr-5">Name:</strong></td>
-                        <td class="py-2">Kevin Rey S. Talisic</td>
+                        <td><strong class="py-0 md:py-2 pr-5">Name:</strong></td>
+                        <td class="py-0 md:py-2">Kevin Rey S. Talisic</td>
                     </tr>
                     <tr>
-                        <td><strong class="py-2 pr-5">Birth of date:</strong></td>
-                        <td class="py-2">05-02-2002</td>
+                        <td><strong class="py-0 md:py-2 pr-5">Birth of date:</strong></td>
+                        <td class="py-0 md:py-2">05-02-2002</td>
                     </tr>
                     <tr>
-                        <td><strong class="py-2 pr-5">Sex:</strong></td>
-                        <td class="py-2">Male</td>
+                        <td><strong class="py-0 md:py-2 pr-5">Sex:</strong></td>
+                        <td class="py-0 md:py-2">Male</td>
                     </tr>
                     <tr>
-                        <td><strong class="py-2 pr-5">Address:</strong></td>
-                        <td class="py-2">GMA Cavite</td>
+                        <td><strong class="py-0 md:py-2 pr-5">Address:</strong></td>
+                        <td class="py-0 md:py-2">GMA Cavite</td>
                     </tr>
                     <tr>
-                        <td><strong class="py-2 pr-5">Citizenship:</strong></td>
-                        <td class="py-2">Filipino</td>
+                        <td><strong class="py-0 md:py-2 pr-5">Citizenship:</strong></td>
+                        <td class="py-0 md:py-2">Filipino</td>
                     </tr>
                 </table>
-                <div class="p-1 border-2 border-white rounded-xl w-max">
-                    <button class="relative px-5 py-2 text-base text-white rounded-xl hover:text-gray-800 group">
-                        <span class="button-text">Next Page&nbsp;</span>
-                        <span class="bg-transition"></span>
-                        <span class="button-icon"><i class="fa-solid fa-house" style="color: darkgray;"></i></span>
-                    </button>
+                <div id="education" class="p-[3px] md:p-1 border-2 border-white animate-up rounded-xl w-max">
+                    <a class="flex items-center" href="#education">
+                        <button class="relative px-4 py-1 md:px-5 md:py-2 text-[6px] md:text-base text-white rounded-xl hover:text-gray-800 group">
+                            <span class="button-text">Next Page&nbsp;</span>
+                            <span class="bg-transition"></span>
+                            <span class="button-icon"><i class="fa-solid fa-right-long" style="color: darkgray;"></i></span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
-        <div id="education" class="mx-auto main-content-section">
+        <div class="mx-auto main-content-section">
             <div class="pt-[18%] space-y-4 mb-[20%]">
-                <h1 class="w-full text-6xl font-extrabold text-center text-white animate-up">
+                <h1 class="w-full text-lg lg:text-6xl font-extrabold text-center text-white animate-up">
                     <b>My</b> <b class="text-teal-300">Education Attainment</b>
                 </h1>
-                <div class="grid md:grid-rows-4 animate-up lg:grid-cols-2 xl:grid-cols-4">
-                    <div class="flex items-center my-5 justify-center w-48 mx-auto bg-teal-300 h-72 rounded-xl">
-                        <button class="relative pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
+                <div class="grid animate-up grid-cols-2 xl:grid-cols-4">
+                    <div class="flex items-center animate-up my-5 justify-center w-36 md:w-48 mx-auto bg-teal-300 h-52 md:h-72 rounded-xl">
+                        <button class="relative pt-16 md:pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
                             <span class="hideme">Elementary&nbsp;</span><br>
                             <span class="bg-transition"><img src="img/college.JPG" alt="KevsWeb Logo" class="z-20 w-full h-full"> </span>
-                            <span class="relative z-30 ml-5 text-center highlighted-text top-8 button-icon">Graduated:2014<br><i class="text-xs">Learner Centered Christian School</i></span>
+                            <span class="relative z-30 ml-5 text-center text-xs md:text-base highlighted-text top-4 md:top-8 button-icon">Graduated:2014<br><i class="text-[6px] md:text-xs">Learner Centered Christian School</i></span>
                         </button>
                     </div>
-                    <div class="flex items-center my-5 justify-center w-48 mx-auto bg-teal-300 h-72 rounded-xl">
-                        <button class="relative pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
+                    <div class="flex items-center animate-up my-5 justify-center w-36 md:w-48 mx-auto bg-teal-300 h-52 md:h-72 rounded-xl">
+                        <button class="relative pt-16 md:pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
                             <span class="hideme">Junior High School&nbsp;</span><br>
                             <span class="bg-transition"><img src="img/college.JPG" alt="KevsWeb Logo" class="z-20 w-full h-full"> </span>
-                            <span class="relative z-30 pl-1 ml-5 text-center highlighted-text top-8 button-icon">Graduated:2018<br><i class="text-xs">General Mariano Alvarez Technical High School</i></span>
+                            <span class="relative z-30 pl-1 ml-5 text-center text-xs md:text-base highlighted-text top-4 md:top-8 button-icon">Graduated:2018<br><i class="text-[5px] md:text-xs">General Mariano Alvarez Technical High School</i></span>
                         </button>
                     </div>
-                    <div class="flex items-center my-5 justify-center w-48 mx-auto bg-teal-400 h-72 rounded-xl">
-                        <button class="relative pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
+                    <div class="flex items-center animate-up my-5 justify-center w-36 md:w-48 mx-auto bg-teal-400 h-52 md:h-72 rounded-xl">
+                        <button class="relative pt-16 md:pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
                             <span class="hideme">Senior High School&nbsp;</span><br>
                             <span class="bg-transition"><img src="img/college.JPG" alt="KevsWeb Logo" class="z-20 w-full h-full"> </span>
-                            <span class="relative z-30 pl-1 ml-5 text-center highlighted-text top-8 button-icon">Graduated:2020<br><i class="text-xs">Asian Institute of Computer Studies</i></span>
+                            <span class="relative z-30 pl-1 ml-5 text-center text-xs md:text-base highlighted-text top-4 md:top-8 button-icon">Graduated:2020<br><i class="text-[6px] md:text-xs">Asian Institute of Computer Studies</i></span>
                         </button>
                     </div>
-                    <div class="flex items-center my-5 justify-center w-48 mx-auto bg-teal-500 h-72 rounded-xl">
-                        <button class="relative pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
+                    <div class="flex items-center animate-up my-5 justify-center w-36 md:w-48 mx-auto bg-teal-500 h-52 md:h-72 rounded-xl">
+                        <button class="relative pt-16 md:pt-20 z-10 w-full h-full text-base text-white hover:scale-110 rounded-xl hover:text-gray-800 group">
                             <span class="hideme">College&nbsp;</span><br>
                             <span class="bg-transition"><img src="img/college.JPG" alt="KevsWeb Logo" class="z-20 w-full h-full"> </span>
-                            <span class="relative z-30 pl-1 ml-5 text-center highlighted-text top-8 button-icon">Graduated:2024<br><i class="text-xs">Cavite State University - Carmona Campus</i></span>
+                            <span class="relative z-30 pl-1 ml-5 text-center text-xs md:text-base highlighted-text top-4 md:top-8 button-icon">Graduated:2024<br><i class="text-[6px] md:text-xs">Cavite State University - Carmona Campus</i></span>
                         </button>
                     </div>
                 </div>
