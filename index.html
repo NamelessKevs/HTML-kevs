@@ -206,13 +206,13 @@
     </div>
 
     <div id="main-content" class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-16 md:mt-28">
-        <div id="main-content" class="grid mb-[1px] md:mb-[10%] grid-cols-2 main-content-section">
+        <div id="main-content" class="grid grid-cols-2 main-content-section">
             <div class="pt-[35%] md:pt-[20%] space-y-1 md:space-y-4 pl-[2%]">
                 <h1 class="text-base lg:text-6xl font-extrabold text-white animate-up">
                     <b>Kevin</b> <b class="text-teal-500">Rey</b> <b>S.</b> <b class="text-teal-500">Talisic</b>
                 </h1>
                 <p class="text-[8px] md:text-2xl font-semibold text-white animate-up">A web developer.</p>
-                <p id="aboutme" class="text-[5px] md:text-base font-thin text-white animate-up">
+                <p class="text-[5px] md:text-base font-thin text-white animate-up">
                     A Filipino programmer with a Bachelor of Science in Computer Science<br>
                     from Cavite State University - Carmona Campus, graduated in 2024.<br>
                     Committed to continuous learning and growth in the field of programming.<br>
@@ -231,7 +231,7 @@
                 <img src="img/maincontent.png" alt="KevsWeb Logo" class="w-96 h-120"> 
             </div>
         </div>
-        
+        <div class=" mb-[1px] md:mb-[6%]" id="aboutme"></div>
         <div class="grid grid-cols-2 animate-up main-content-section">
             <div>&nbsp;</div>
             <div class="pt-[2%] md:pt-[18%] space-y-2 md:space-y-4 mb-10 md:mb-[20%] pl-0 md:pl-[10%]">
@@ -257,18 +257,42 @@
                         <td class="py-0 md:py-2">GMA Cavite</td>
                     </tr>
                     <tr>
+                        <td><strong class="py-0 md:py-2 pr-5">Zip Code:</strong></td>
+                        <td class="py-0 md:py-2">4117</td>
+                    </tr>
+                    <tr>
                         <td><strong class="py-0 md:py-2 pr-5">Citizenship:</strong></td>
                         <td class="py-0 md:py-2">Filipino</td>
                     </tr>
                 </table>
-                <div id="education" class="p-[3px] md:p-1 border-2 border-white animate-up rounded-xl w-max">
-                    <a class="flex items-center" href="#education">
-                        <button class="relative px-4 py-1 md:px-5 md:py-2 text-[6px] md:text-base text-white rounded-xl hover:text-gray-800 group">
-                            <span class="button-text">Next Page&nbsp;</span>
-                            <span class="bg-transition"></span>
-                            <span class="button-icon"><i class="fa-solid fa-right-long" style="color: darkgray;"></i></span>
-                        </button>
-                    </a>
+                <div class="flex flex-row space-x-2">
+                    <div class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
+                        <a class="flex items-center" href="https://drive.google.com/file/d/12s46Zxyo17vGmtnGmTfmJSTlLEAgBVcK/view?usp=drive_link" target="_blank">
+                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[5px] md:text-base text-white rounded-xl hover:text-gray-800 group">
+                                <span class="button-text">CV&nbsp;</span>
+                                <span class="bg-transition"></span>
+                                <span class="button-icon"><i class="fa-regular fa-file-pdf" style="color: green;"></i></span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
+                        <a class="flex items-center" href="https://drive.google.com/file/d/1XklbQQ8UNNMr3PFZT89i-sO44mdE7dCr/view?usp=drive_link" target="_blank">
+                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[5px] md:text-base text-white rounded-xl hover:text-gray-800 group">
+                                <span class="button-text">Resume&nbsp;</span>
+                                <span class="bg-transition"></span>
+                                <span class="button-icon"><i class="fa-regular fa-file-pdf" style="color: teal;"></i></span>
+                            </button>
+                        </a>
+                    </div>
+                    <div id="education" class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
+                        <a class="flex items-center" href="#education">
+                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[5px] md:text-base text-white rounded-xl hover:text-gray-800 group">
+                                <span class="button-text">Next Page&nbsp;</span>
+                                <span class="bg-transition"></span>
+                                <span class="button-icon"><i class="fa-solid fa-right-long" style="color: darkgray;"></i></span>
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

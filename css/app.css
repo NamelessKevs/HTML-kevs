@@ -51,7 +51,7 @@ button {
 }
 
 button:hover .button-text {
-    transform: translateX(-10px); /* Move text to the left */
+    transform: translateX(-8px); /* Move text to the left */
 }
 
 button:hover .hideme {
