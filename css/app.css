@@ -136,7 +136,7 @@ button:hover .button-icon {
     }
 }
 .bgspin {
-    animation: spinner 10s linear infinite;
+    animation: spinner 11.5s linear infinite;
 }
 .bgfloat {
     animation: float 10s ease-in-out infinite;

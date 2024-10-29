@@ -59,11 +59,13 @@
                             <span class="button-icon"><i class="fa-solid fa-graduation-cap" style="color: rgb(72, 161, 190);"></i></span>
                         </button>
                     </a>
-                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
-                        <span class="button-text">Experience&nbsp;</span>
-                        <span class="bg-transition"></span>
-                        <span class="button-icon"><i class="fa-regular fa-star" style="color: darkorange;"></i></span>
-                    </button>
+                    <a href="#experience">
+                        <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                            <span class="button-text">Experience&nbsp;</span>
+                            <span class="bg-transition"></span>
+                            <span class="button-icon"><i class="fa-regular fa-star" style="color: darkorange;"></i></span>
+                        </button>
+                    </a>
                     <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
                         <span class="button-text">Projects&nbsp;</span>
                         <span class="bg-transition"></span>
@@ -204,8 +206,8 @@
             </div>
         </div>
     </div>
-
-    <div id="main-content" class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-16 md:mt-28">
+    <div id="main-content">&nbsp;</div>
+    <div class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-16 md:mt-28">
         <div id="main-content" class="grid grid-cols-2 main-content-section">
             <div class="pt-[35%] md:pt-[20%] space-y-1 md:space-y-4 pl-[2%]">
                 <h1 class="text-base lg:text-6xl font-extrabold text-white animate-up">
@@ -231,7 +233,7 @@
                 <img src="img/maincontent.png" alt="KevsWeb Logo" class="w-96 h-120"> 
             </div>
         </div>
-        <div class="mb-[60px] md:mb-[6%]" id="aboutme"></div>
+        <div class="mb-[10px] md:mb-[6%]" id="aboutme"></div>
         <div class="grid grid-cols-2 animate-up main-content-section">
             <div>&nbsp;</div>
             <div class="pt-[2%] md:pt-[18%] space-y-2 md:space-y-4 mb-10 md:mb-[20%] pl-0 md:pl-[10%]">
@@ -284,7 +286,7 @@
                             </button>
                         </a>
                     </div>
-                    <div id="education" class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
+                    <div class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
                         <a class="flex items-center" href="#education">
                             <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[5px] md:text-base text-white rounded-xl hover:text-gray-800 group">
                                 <span class="button-text">Next Page&nbsp;</span>
@@ -296,7 +298,7 @@
                 </div>
             </div>
         </div>
-        <div class="mx-auto main-content-section">
+        <div id="education" class="mx-auto main-content-section">
             <div class="pt-[2%] md:pt-[18%] space-y-1 mb-[1px] md:mb-[20%]">
                 <h1 class="w-full text-lg lg:text-6xl font-extrabold text-center text-white animate-up">
                     <b>My</b> <b class="text-teal-300">Education Attainment</b>
@@ -330,6 +332,72 @@
                             <span class="relative z-30 pl-1 ml-5 text-center text-xs md:text-base highlighted-text top-4 md:top-8 button-icon">Graduated:2024<br><i class="text-[6px] md:text-xs">Cavite State University - Carmona Campus</i></span>
                         </button>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div id="experience" class="mx-auto main-content-section">
+            <div class="pt-[2%] md:pt-[10%] space-y-1 mb-[1px] md:mb-[20%]">
+                <h1 class="w-full text-lg md:text-6xl font-extrabold text-center text-white animate-up">
+                    <b class="text-teal-500">My</b> <b>Experience</b>
+                </h1>
+                <div class="grid animate-up grid-cols-1 xl:grid-cols-2">
+                    <div x-data="{ hovered: null }" class="p-2 md:p-4 flex flex-col w-full space-y-2">
+                        <div 
+                            @mouseenter="hovered = 1" @mouseleave="hovered = null"
+                            :class="{ 'opacity-40': hovered && hovered !== 1 }" 
+                            class="bg-white shadow-xl bg-opacity-60 hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4"
+                        >
+                            <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max">January 2020 - February 2020</h1>
+                            <h3><i class="text-sm xl:text-base">- Encoder (Senior High School: Internship)</i></h3>
+                            <h1 class="pt-2 md:pt-4 font-bold text-sm xl:text-base"><a href="https://www.shinkozan.com/" target="_blank">Shinkozan Corporation</a></h1>
+                            <p class="text-sm xl:text-base">Hong Chang Compound, Rd. Astro, Carmona, 4116 Cavite</p>
+                        </div>
+                    
+                        <div 
+                            @mouseenter="hovered = 2" @mouseleave="hovered = null"
+                            :class="{ 'opacity-40': hovered && hovered !== 2 }" 
+                            class="bg-white shadow-xl bg-opacity-60 hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4"
+                        >
+                            <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max">August 2023 - September 2023</h1>
+                            <h3><i class="text-sm xl:text-base">- Programmer (College: Internship)</i></h3>
+                            <h1 class="pt-2 md:pt-4 font-bold text-sm xl:text-base">
+                                <a href="https://genmarianoalvarez.gov.ph/" target="_blank">General Mariano Alvarez Municipal Hall - ICT Department</a>
+                            </h1>
+                            <p class="text-sm xl:text-base">4117 Congressional Rd, General Mariano Alvarez, Cavite</p>
+                        </div>
+
+                        <div 
+                            @mouseenter="hovered = 3" @mouseleave="hovered = null"
+                            :class="{ 'opacity-40': hovered && hovered !== 3 }" 
+                            class="bg-white shadow-xl bg-opacity-60 hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4"
+                        >
+                            <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max">August 2024 - Present</h1>
+                            <h3><i class="text-sm xl:text-base">-IT Programmer</i></h3>
+                            <h1 class="pt-2 md:pt-4 font-bold text-sm xl:text-base">
+                                <a href="https://www.betafoam.ph/" target="_blank">Betafoam Corporation</a>
+                            </h1>
+                            <p class="text-sm xl:text-base">Blk 12 Lot 5 Dasma Technopark, Dasmariñas, 4114 Cavite</p>
+                        </div>
+                    </div> 
+                    <div class="p-2 md:p-4 flex flex-col w-full space-y-2">
+                        <h1 class="w-full text-sm md:text-xl font-extrabold text-center text-white animate-up">
+                            <b class="text-teal-500">Primary</b> <b>Tools</b>
+                        </h1>
+                        <div class="flex flex-row w-full space-x-2">
+                            <div class="bg-white shadow-xl bg-opacity-60 flex flex-col justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4">
+                                <img src="img/VSCode.png" class="w-20 h-20 mx-auto">
+                                <h1 class="p-2 text-xs xl:text-sm mx-auto">Visual Studio Code</h1>
+                            </div>
+                            <div class="bg-white shadow-xl bg-opacity-60 hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4">
+                                <img src="img/laragon.png" class="w-24 h-20 mx-auto">
+                                <h1 class="p-2 text-xs w-max xl:text-sm mx-auto">Laragon</h1>
+                            </div>
+                            <div class="bg-white shadow-xl bg-opacity-60 hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4">
+                                <img src="img/photoshop.png" class="w-20 h-20 mx-auto">
+                                <h1 class="p-2 text-xs w-max xl:text-sm mx-auto">Photoshop</h1>
+                            </div>
+                        </div>
+                    </div>                   
                 </div>
             </div>
         </div>
