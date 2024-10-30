@@ -353,7 +353,7 @@
                     <b class="text-teal-500">My</b> <b>Experience</b>
                 </h1>
                 <div class="grid animate-up grid-cols-1 xl:grid-cols-2">
-                    <div x-data="{ hovered: null }" class="p-2 md:p-4 flex flex-col w-full space-y-2">
+                    <div x-data="{ hovered: null }" class="p-2 md:p-4 hidden flex flex-col w-full space-y-2">
                         <div 
                             @mouseenter="hovered = 1" @mouseleave="hovered = null"
                             :class="{ 'opacity-40': hovered && hovered !== 1 }" 
@@ -395,7 +395,7 @@
                         <h1 class="w-full text-sm md:text-xl font-extrabold text-center text-white animate-up">
                             <b class="text-teal-500">Primary</b> <b>Tools</b>
                         </h1>
-                        <div class="flex flex-col md:flex-row hidden w-full gap-2">
+                        <div class="flex flex-col md:flex-row w-full gap-2">
                             <div class="bg-white shadow-xl bg-opacity-60 flex flex-col justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-1 md:p-3">
                                 <img src="img/vsc.svg" class="w-16 h-16 mx-auto">
                                 <h1 class="p-2 text-xs xl:text-sm mx-auto">Visual Studio Code</h1>
