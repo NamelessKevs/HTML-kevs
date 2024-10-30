@@ -88,23 +88,23 @@
                 x-transition:leave-start="transform opacity-100 translate-y-0"
                 x-transition:leave-end="transform opacity-0 translate-y-[-5%]"
                 class="absolute z-10 h-60 px-6 mt-4 overflow-y-auto bg-gray-700 rounded-lg shadow-lg md:h-auto right-5 top-16 bg-opacity-70 backdrop-blur-lg lg:hidden">
-                <div class="flex flex-col p-2 gap-y-1">
-                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                <div class="flex flex-col px-2 py-4 gap-y-1">
+                    <button onclick="document.querySelector('#cpmain').scrollIntoView({ behavior: 'smooth' });" class="relative text-base px-5 mx-2 py-2 text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
                         <span class="button-text">Home&nbsp;</span>
                         <span class="bg-transition"></span>
                         <span class="button-icon"><i class="fa-solid fa-house" style="color: darkgray;"></i></span>
                     </button>
-                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                    <button onclick="document.querySelector('#cpabout').scrollIntoView({ behavior: 'smooth' });" class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
                         <span class="button-text">About Me&nbsp;</span>
                         <span class="bg-transition"></span>
                         <span class="button-icon"><i class="fa-solid fa-user" style="color: limegreen;"></i></span>
                     </button>
-                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                    <button onclick="document.querySelector('#cped').scrollIntoView({ behavior: 'smooth' });" class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
                         <span class="button-text">Education&nbsp;</span>
                         <span class="bg-transition"></span>
                         <span class="button-icon"><i class="fa-solid fa-graduation-cap" style="color: rgb(72, 161, 190);"></i></span>
                     </button>
-                    <button class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
+                    <button onclick="document.querySelector('#cpexp').scrollIntoView({ behavior: 'smooth' });" class="relative px-5 py-2 mx-2 text-base text-white hover:scale-150 rounded-xl hover:text-gray-800 group">
                         <span class="button-text">Experience&nbsp;</span>
                         <span class="bg-transition"></span>
                         <span class="button-icon"><i class="fa-regular fa-star" style="color: darkorange;"></i></span>
@@ -183,7 +183,7 @@
             </div>
     
             <!-- Third Row of Shapes -->
-            <div class="flex flex-row opacity-30 mt-[10%] md:mt-[30%]">
+            <div class="flex flex-row opacity-30 ml-20 md:ml-0 mt-[5%] md:mt-[30%]">
                 <div class="pr-[10%] relative z-10 pt-[10%]">
                     <div class="relative z-10 w-16 h-16 bg-gray-200 shadow-xl md:w-32 md:h-32 bgspin rounded-xl"></div>
                     <div class="relative w-12 h-12 bg-teal-400 md:w-24 md:h-24 right-4 bottom-8 md:right-8 md:bottom-14 bgspin rounded-xl"></div>
@@ -215,24 +215,24 @@
             </div>
         </div>
     </div>
-    
-
-    <div id="main-content">&nbsp;</div>
-    <div class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1250px] mt-16 md:mt-28">
+    <div class="flex flex-row">
+        <div id="cpmain">&nbsp;</div><div id="main-content">&nbsp;</div>
+    </div>
+    <div class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1250px] mt-10 md:mt-28">
         <div id="main-content" class="grid grid-cols-2 main-content-section">
-            <div class="pt-[35%] md:pt-[20%] space-y-1 md:space-y-4 pl-[2%]">
+            <div class="pt-[30%] md:pt-[20%] space-y-1 md:space-y-4 pl-[2%]">
                 <h1 class="text-base lg:text-6xl font-extrabold text-white animate-up">
                     <b>Kevin</b> <b class="text-teal-500">Rey</b> <b>S.</b> <b class="text-teal-500">Talisic</b>
                 </h1>
                 <p class="text-[8px] md:text-2xl font-semibold text-white animate-up">A web developer.</p>
-                <p class="text-[5px] md:text-base text-justify w-4/5 font-thin text-white animate-up">
+                <p class="text-[8px] md:text-base text-justify w-full md:w-4/5 font-thin text-white animate-up">
                     A Filipino programmer with a Bachelor of Science in Computer Science
                     from Cavite State University - Carmona Campus, graduated in 2024.
                     Committed to continuous learning and growth in the field of programming and designing.
                 </p>
-                <div class="p-[3px] md:p-1 border-2 border-teal-500 animate-up rounded-xl w-max">
+                <div id="cpabout" class="p-[3px] md:p-1 border-2 border-teal-500 animate-up rounded-xl w-max">
                     <a class="flex items-center" href="#aboutme">
-                        <button class="relative px-4 py-1 md:px-5 md:py-2 text-[6px] md:text-base text-white rounded-xl hover:text-gray-800 group">
+                        <button class="relative px-4 py-1 md:px-5 md:py-2 text-[8px] md:text-base text-white rounded-xl hover:text-gray-800 group">
                             <span class="button-text">Next Page&nbsp;</span>
                             <span class="bg-transition"></span>
                             <span class="button-icon"><i class="fa-solid fa-right-long" style="color: teal;"></i></i></span>
@@ -252,7 +252,7 @@
                     <b>About</b> <b class="text-teal-300">Me</b>
                 </h1>
                 <p class="text-[8px] md:text-2xl font-semibold text-white">Here is my basic personal information.</p>
-                <table class="text-[5px] md:text-base font-thin text-white">
+                <table class="text-[8px] md:text-base font-thin text-white">
                     <tr>
                         <td><strong class="py-0 md:py-2 pr-5">Name:</strong></td>
                         <td class="py-0 md:py-2">Kevin Rey S. Talisic</td>
@@ -273,7 +273,7 @@
                         <td><strong class="py-0 md:py-2 pr-5">Zip Code:</strong></td>
                         <td class="py-0 md:py-2">4117</td>
                     </tr>
-                    <tr>
+                    <tr id="cped">
                         <td><strong class="py-0 md:py-2 pr-5">Citizenship:</strong></td>
                         <td class="py-0 md:py-2">Filipino</td>
                     </tr>
@@ -281,7 +281,7 @@
                 <div class="flex flex-row space-x-2">
                     <div class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
                         <a class="flex items-center" href="https://drive.google.com/file/d/12s46Zxyo17vGmtnGmTfmJSTlLEAgBVcK/view?usp=drive_link" target="_blank">
-                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[5px] md:text-base text-white rounded-xl hover:text-gray-800 group">
+                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[8px] md:text-base text-white rounded-xl hover:text-gray-800 group">
                                 <span class="button-text">CV&nbsp;</span>
                                 <span class="bg-transition"></span>
                                 <span class="button-icon"><i class="fa-regular fa-file-pdf" style="color: green;"></i></span>
@@ -290,7 +290,7 @@
                     </div>
                     <div class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
                         <a class="flex items-center" href="https://drive.google.com/file/d/1XklbQQ8UNNMr3PFZT89i-sO44mdE7dCr/view?usp=drive_link" target="_blank">
-                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[5px] md:text-base text-white rounded-xl hover:text-gray-800 group">
+                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[8px] md:text-base text-white rounded-xl hover:text-gray-800 group">
                                 <span class="button-text">Resume&nbsp;</span>
                                 <span class="bg-transition"></span>
                                 <span class="button-icon"><i class="fa-regular fa-file-pdf" style="color: teal;"></i></span>
@@ -299,7 +299,7 @@
                     </div>
                     <div class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
                         <a class="flex items-center" href="#education">
-                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[5px] md:text-base text-white rounded-xl hover:text-gray-800 group">
+                            <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[8px] md:text-base text-white rounded-xl hover:text-gray-800 group">
                                 <span class="button-text">Next Page&nbsp;</span>
                                 <span class="bg-transition"></span>
                                 <span class="button-icon"><i class="fa-solid fa-right-long" style="color: darkgray;"></i></span>
@@ -343,6 +343,7 @@
                             <span class="relative z-30 pl-1 ml-5 text-center text-xs md:text-base highlighted-text top-4 md:top-8 button-icon">Graduated:2024<br><i class="text-[6px] md:text-xs">Cavite State University - Carmona Campus</i></span>
                         </button>
                     </div>
+                    <div id="cpexp" class="block relative left-40 -top-10 md:hidden">&nbsp;</div>
                 </div>
             </div>
         </div>
@@ -394,7 +395,7 @@
                         <h1 class="w-full text-sm md:text-xl font-extrabold text-center text-white animate-up">
                             <b class="text-teal-500">Primary</b> <b>Tools</b>
                         </h1>
-                        <div class="flex flex-row w-full space-x-2">
+                        <div class="flex flex-col md:flex-row w-full gap-2">
                             <div class="bg-white shadow-xl bg-opacity-60 flex flex-col justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-1 md:p-3">
                                 <img src="img/VSCode.png" class="w-16 h-16 mx-auto">
                                 <h1 class="p-2 text-xs xl:text-sm mx-auto">Visual Studio Code</h1>
@@ -412,7 +413,7 @@
                         <h1 class="w-full text-sm md:text-xl font-extrabold text-center text-white animate-up">
                             <b class="text-teal-500">Development</b> <b>Skills</b>
                         </h1>
-                        <div class="grid grid-cols-3 gap-2">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
                                 <img src="img/livewire.png" class="w-14 h-14">
                                 <h1 class="p-2 text-xs xl:text-sm">Livewire</h1>
