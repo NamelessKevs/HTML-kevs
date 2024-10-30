@@ -347,114 +347,84 @@
                 </div>
             </div>
         </div>
-        <div id="experience" class="mx-auto main-content-section">
-            <div class="pt-[2%] md:pt-[10%] space-y-1 mb-[1px] md:mb-[20%]">
-                <h1 class="w-full text-lg md:text-6xl font-extrabold text-center text-white animate-up">
-                    <b class="text-teal-500">My</b> <b>Experience</b>
+        
+        <div id="experience" class="mx-auto main-content-section" x-data="{ 
+            tools: [
+                { name: 'Visual Studio Code', icon: 'img/vsc.svg' },
+                { name: 'Laragon', icon: 'img/lrg.svg' },
+                { name: 'Photoshop', icon: 'img/phs.svg' }
+            ],
+            skills: [
+                { name: 'Livewire', icon: 'img/lw.svg' },
+                { name: 'Laravel', icon: 'img/lrvl.svg' },
+                { name: 'WireUI', icon: 'img/wui.svg' },
+                { name: 'TallstackUI', icon: 'img/tskui.svg' },
+                { name: 'Tailwind CSS', icon: 'img/twcss.svg' },
+                { name: 'PowerGrid', icon: 'img/pg.svg' },
+                { name: 'JavaScript', icon: 'img/js.svg' },
+                { name: 'AlpineJs', icon: 'img/alpjs.svg' },
+                { name: 'Volt', icon: 'img/v.svg' }
+            ],
+            experiences: [
+                { date: 'Jan 2020 - Feb 2020', role: 'Encoder (Intern)', company: 'Shinkozan Corporation', link: 'https://www.shinkozan.com/', location: 'Hong Chang Compound, Rd. Astro, Carmona, 4116 Cavite' },
+                { date: 'Aug 2023 - Sep 2023', role: 'Programmer (Intern)', company: 'GMA Municipal Hall - ICT', link: 'https://genmarianoalvarez.gov.ph/', location: '4117 Congressional Rd, General Mariano Alvarez, Cavite' },
+                { date: 'Aug 2024 - Present', role: 'IT Programmer', company: 'Betafoam Corporation', link: 'https://www.betafoam.ph/', location: 'Blk 12 Lot 5 Dasma Technopark, Dasmariñas, 4114 Cavite' }
+            ]
+        }">
+            <div class="pt-8 md:pt-20 space-y-4 mb-4 md:mb-20">
+                <h1 class="text-lg md:text-6xl text-center font-extrabold text-white animate-up">
+                    <span class="text-teal-500">My</span> Experience
                 </h1>
-                <div class="grid animate-up grid-cols-1 xl:grid-cols-2">
-                    <div x-data="{ hovered: null }" class="p-2 md:p-4 flex flex-col w-full space-y-2">
-                        <div 
-                            @mouseenter="hovered = 1" @mouseleave="hovered = null"
-                            :class="{ 'opacity-40': hovered && hovered !== 1 }" 
-                            class="bg-white shadow-xl bg-opacity-60 hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4"
-                        >
-                            <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max">January 2020 - February 2020</h1>
-                            <h3><i class="text-sm xl:text-base">- Encoder (Senior High School: Internship)</i></h3>
-                            <h1 class="pt-2 md:pt-4 font-bold text-sm xl:text-base"><a href="https://www.shinkozan.com/" target="_blank">Shinkozan Corporation</a></h1>
-                            <p class="text-sm xl:text-base">Hong Chang Compound, Rd. Astro, Carmona, 4116 Cavite</p>
-                        </div>
+                
+                <div class="grid animate-up grid-cols-1 xl:grid-cols-2 gap-4">
+                    <div x-data="{ hovered: null }" class="p-2 md:p-4 space-y-4">
+                        <template x-for="(experience, index) in experiences" :key="index">
+                            <div 
+                                @mouseenter="hovered = index" 
+                                @mouseleave="hovered = null"
+                                :class="{ 'opacity-40': hovered !== null && hovered !== index }" 
+                                class="bg-white shadow-xl bg-opacity-60 hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm p-4"
+                            >
+                                <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max" x-text="experience.date"></h1>
+                                <h3 class="text-sm xl:text-base italic" x-text="experience.role"></h3>
+                                <h1 class="pt-2 font-bold text-sm xl:text-base">
+                                    <a :href="experience.link" target="_blank" x-text="experience.company"></a>
+                                </h1>
+                                <p class="text-sm xl:text-base" x-text="experience.location"></p>
+                            </div>
+                        </template>
+                    </div>
                     
-                        <div 
-                            @mouseenter="hovered = 2" @mouseleave="hovered = null"
-                            :class="{ 'opacity-40': hovered && hovered !== 2 }" 
-                            class="bg-white shadow-xl bg-opacity-60 hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4"
-                        >
-                            <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max">August 2023 - September 2023</h1>
-                            <h3><i class="text-sm xl:text-base">- Programmer (College: Internship)</i></h3>
-                            <h1 class="pt-2 md:pt-4 font-bold text-sm xl:text-base">
-                                <a href="https://genmarianoalvarez.gov.ph/" target="_blank">General Mariano Alvarez Municipal Hall - ICT Department</a>
-                            </h1>
-                            <p class="text-sm xl:text-base">4117 Congressional Rd, General Mariano Alvarez, Cavite</p>
-                        </div>
-
-                        <div 
-                            @mouseenter="hovered = 3" @mouseleave="hovered = null"
-                            :class="{ 'opacity-40': hovered && hovered !== 3 }" 
-                            class="bg-white shadow-xl bg-opacity-60 hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm w-full p-2 md:p-4"
-                        >
-                            <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max">August 2024 - Present</h1>
-                            <h3><i class="text-sm xl:text-base">-IT Programmer</i></h3>
-                            <h1 class="pt-2 md:pt-4 font-bold text-sm xl:text-base">
-                                <a href="https://www.betafoam.ph/" target="_blank">Betafoam Corporation</a>
-                            </h1>
-                            <p class="text-sm xl:text-base">Blk 12 Lot 5 Dasma Technopark, Dasmariñas, 4114 Cavite</p>
-                        </div>
-                    </div> 
-                    <div class="p-2 md:p-4 flex flex-col w-full space-y-2">
-                        <h1 class="w-full text-sm md:text-xl font-extrabold text-center text-white animate-up">
-                            <b class="text-teal-500">Primary</b> <b>Tools</b>
+                    <div class="p-2 md:p-4 space-y-4 text-center">
+                        <h1 class="text-sm md:text-xl font-extrabold text-white animate-up">
+                            <span class="text-teal-500">Primary</span> Tools
                         </h1>
                         <div class="flex flex-col md:flex-row w-full gap-2">
-                            <div class="bg-white shadow-xl bg-opacity-60 flex flex-col justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-1 md:p-3">
-                                <img src="img/vsc.svg" class="w-16 h-16 mx-auto">
-                                <h1 class="p-2 text-xs xl:text-sm mx-auto">Visual Studio Code</h1>
-                            </div>
-                            <div class="bg-white shadow-xl bg-opacity-60 hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-1 md:p-3">
-                                <img src="img/lrg.svg" class="w-20 h-16 mx-auto">
-                                <h1 class="p-2 text-xs w-max xl:text-sm mx-auto">Laragon</h1>
-                            </div>
-                            <div class="bg-white shadow-xl bg-opacity-60 hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-1 md:p-3">
-                                <img src="img/phs.svg" class="w-16 h-16 mx-auto">
-                                <h1 class="p-2 text-xs w-max xl:text-sm mx-auto">Photoshop</h1>
-                            </div>
+                            <template x-for="tool in tools" :key="tool.name">
+                                <div class="bg-white shadow-xl bg-opacity-60 flex flex-col justify-center hover:scale-110 backdrop-blur-3xl rounded-sm p-3 w-full">
+                                    <img :src="tool.icon" class="w-16 h-16 mx-auto">
+                                    <h1 class="text-xs xl:text-sm mt-2" x-text="tool.name"></h1>
+                                </div>
+                            </template>
                         </div>
-                        <div class="bg-teal-400 w-full h-2 my-2"></div>
-                        <h1 class="w-full text-sm md:text-xl font-extrabold text-center text-white animate-up">
-                            <b class="text-teal-500">Development</b> <b>Skills</b>
+                        
+                        <div class="bg-teal-400 h-2 my-2"></div>
+                        
+                        <h1 class="text-sm md:text-xl font-extrabold text-white animate-up">
+                            <span class="text-teal-500">Development</span> Skills
                         </h1>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
-                            <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/lw.svg" class="w-14 h-14">
-                                <h1 class="p-2 text-xs xl:text-sm">Livewire</h1>
-                            </div>
-                            <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/lrvl.svg" class="w-12 h-12 mx-2">
-                                <h1 class="p-2 text-xs xl:text-sm">Laravel</h1>
-                            </div>
-                            <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/wui.svg" class="w-12 h-12">
-                                <h1 class="p-2 text-xs xl:text-sm">WireUI</h1>
-                            </div>
-                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/tskui.svg" class="w-12 h-12">
-                                <h1 class="p-2 text-xs xl:text-sm">TallstackUI</h1>
-                            </div>
-                            <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/twcss.svg" class="w-14 h-10">
-                                <h1 class="p-2 text-xs xl:text-sm">Tailwind CSS</h1>
-                            </div>
-                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/pg.svg" class="w-12 h-12">
-                                <h1 class="p-2 text-xs xl:text-sm">PowerGrid</h1>
-                            </div>
-                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/js.svg" class="w-14 h-14">
-                                <h1 class="p-2 text-xs xl:text-sm">JavaScript</h1>
-                            </div>
-                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/alpjs.svg" class="w-14 h-14">
-                                <h1 class="p-2 text-xs xl:text-sm">AlpineJs</h1>
-                            </div>
-                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
-                                <img src="img/v.svg" class="w-12 h-12">
-                                <h1 class="p-2 text-xs xl:text-sm">Volt</h1>
-                            </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <template x-for="skill in skills" :key="skill.name">
+                                <div class="bg-white shadow-xl bg-opacity-60 flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm p-1">
+                                    <img :src="skill.icon" class="w-12 h-12">
+                                    <h1 class="text-xs xl:text-sm ml-2" x-text="skill.name"></h1>
+                                </div>
+                            </template>
                         </div>
-                    </div>                   
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>                
     </div>
     <script>
         window.addEventListener('load', function () {
