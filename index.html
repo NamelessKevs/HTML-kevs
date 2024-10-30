@@ -125,28 +125,28 @@
     </header>
 
     <div class="background">
-        <div class="relative opacity-10">
+        <div class="relative opacity-20">
             <div class="p-1 absolute top-20 -left-16 md:top-32 md:left-20 border border-gray-500">
                 <div x-data="{ angle: 0 }" x-init="setInterval(() => { angle += 45; }, 10000)" class="dot-box" 
                     x-bind:style="'transform: rotate(' + angle + 'deg); transition: transform 0.5s;'">
                 </div>
             </div>
         </div>
-        <div class="absolute -right-10 bottom-40 md:right-20 md:bottom-10 opacity-10">
+        <div class="absolute -right-10 bottom-40 md:right-20 md:bottom-10 opacity-20">
             <div class="p-1 border border-gray-500">
                 <div x-data="{ angle: 0 }" x-init="setInterval(() => { angle += 45; }, 7000)" class="dot-box2" 
                     x-bind:style="'transform: rotate(' + angle + 'deg); transition: transform 0.5s;'">
                 </div>
             </div>
         </div>
-        <div class="absolute -left-44 -bottom-80 md:left-64 md:-bottom-72 opacity-10">
+        <div class="absolute -left-44 -bottom-80 md:left-64 md:-bottom-72 opacity-20">
             <div class="p-1 border border-gray-500">
                 <div x-data="{ angle: 0 }" x-init="setInterval(() => { angle += 45; }, 3800)" class="dot-box3" 
                     x-bind:style="'transform: rotate(' + angle + 'deg); transition: transform 0.5s;'">
                 </div>
             </div>
         </div>
-        <div class="absolute right-80 hidden md:block -top-64 opacity-10">
+        <div class="absolute right-80 hidden md:block -top-64 opacity-20">
             <div class="p-1 border border-gray-500">
                 <div x-data="{ angle: 0 }" x-init="setInterval(() => { angle += 45; }, 20000)" class="dot-box3" 
                     x-bind:style="'transform: rotate(' + angle + 'deg); transition: transform 0.5s;'">
@@ -155,7 +155,7 @@
         </div>
         <div class="flex-row justify-evenly pt-[20%] md:pt-0 flex opacity-10 bgfloat">
             <!-- First Row of Shapes -->
-            <div class="flex flex-row opacity-20 mt-[40%] md:mt-[20%]">
+            <div class="flex flex-row opacity-30 mt-[40%] md:mt-[20%]">
                 <div class="pt-[60%]">
                     <div class="relative z-10 w-10 h-10 bg-gray-200 shadow-xl md:w-20 md:h-20 bgspin rounded-xl"></div>
                     <div class="relative w-10 h-10 bg-teal-400 md:w-20 md:h-20 left-2 md:left-6 bottom-8 md:bottom-16 bgspin rounded-xl"></div>
@@ -167,7 +167,7 @@
             </div>
     
             <!-- Second Row of Shapes -->
-            <div class="flex flex-row opacity-20 mt-[80%] md:mt-[10%]">
+            <div class="flex flex-row opacity-30 mt-[80%] md:mt-[10%]">
                 <div class="pr-[10%] relative z-10 pt-[10%]">
                     <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl"></div>
                     <div class="relative w-6 h-6 bg-teal-400 md:w-10 md:h-10 left-2 bottom-6 bgspin rounded-xl"></div>
@@ -183,7 +183,7 @@
             </div>
     
             <!-- Third Row of Shapes -->
-            <div class="flex flex-row opacity-20 mt-[10%] md:mt-[30%]">
+            <div class="flex flex-row opacity-30 mt-[10%] md:mt-[30%]">
                 <div class="pr-[10%] relative z-10 pt-[10%]">
                     <div class="relative z-10 w-16 h-16 bg-gray-200 shadow-xl md:w-32 md:h-32 bgspin rounded-xl"></div>
                     <div class="relative w-12 h-12 bg-teal-400 md:w-24 md:h-24 right-4 bottom-8 md:right-8 md:bottom-14 bgspin rounded-xl"></div>
@@ -191,7 +191,7 @@
             </div>
     
             <!-- Fourth Row of Shapes -->
-            <div class="flex flex-row opacity-20 mt-[98%] md:mt-[15%]">
+            <div class="flex flex-row opacity-30 mt-[98%] md:mt-[15%]">
                 <div class="pr-[3%] relative z-10 pt-[40%]">
                     <div class="relative z-10 w-6 h-6 bg-gray-200 shadow-xl md:w-10 md:h-10 bgspin rounded-xl"></div>
                     <div class="relative w-6 h-6 bg-teal-400 md:w-10 md:h-10 left-2 bottom-6 bgspin rounded-xl"></div>
@@ -218,17 +218,17 @@
     
 
     <div id="main-content">&nbsp;</div>
-    <div class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-16 md:mt-28">
+    <div class="relative z-20 p-5 mx-auto w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1250px] mt-16 md:mt-28">
         <div id="main-content" class="grid grid-cols-2 main-content-section">
             <div class="pt-[35%] md:pt-[20%] space-y-1 md:space-y-4 pl-[2%]">
                 <h1 class="text-base lg:text-6xl font-extrabold text-white animate-up">
                     <b>Kevin</b> <b class="text-teal-500">Rey</b> <b>S.</b> <b class="text-teal-500">Talisic</b>
                 </h1>
                 <p class="text-[8px] md:text-2xl font-semibold text-white animate-up">A web developer.</p>
-                <p class="text-[5px] md:text-base font-thin text-white animate-up">
-                    A Filipino programmer with a Bachelor of Science in Computer Science<br>
-                    from Cavite State University - Carmona Campus, graduated in 2024.<br>
-                    Committed to continuous learning and growth in the field of programming.<br>
+                <p class="text-[5px] md:text-base text-justify w-4/5 font-thin text-white animate-up">
+                    A Filipino programmer with a Bachelor of Science in Computer Science
+                    from Cavite State University - Carmona Campus, graduated in 2024.
+                    Committed to continuous learning and growth in the field of programming and designing.
                 </p>
                 <div class="p-[3px] md:p-1 border-2 border-teal-500 animate-up rounded-xl w-max">
                     <a class="flex items-center" href="#aboutme">
@@ -406,6 +406,48 @@
                             <div class="bg-white shadow-xl bg-opacity-60 hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-1 md:p-3">
                                 <img src="img/photoshop.png" class="w-16 h-16 mx-auto">
                                 <h1 class="p-2 text-xs w-max xl:text-sm mx-auto">Photoshop</h1>
+                            </div>
+                        </div>
+                        <div class="bg-teal-400 w-full h-2 my-2"></div>
+                        <h1 class="w-full text-sm md:text-xl font-extrabold text-center text-white animate-up">
+                            <b class="text-teal-500">Development</b> <b>Skills</b>
+                        </h1>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/livewire.png" class="w-14 h-14">
+                                <h1 class="p-2 text-xs xl:text-sm">Livewire</h1>
+                            </div>
+                            <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/laravel.png" class="w-12 h-12 mx-2">
+                                <h1 class="p-2 text-xs xl:text-sm">Laravel</h1>
+                            </div>
+                            <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/wireui.png" class="w-12 h-12">
+                                <h1 class="p-2 text-xs xl:text-sm">WireUI</h1>
+                            </div>
+                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/tallstackui.png" class="w-12 h-12">
+                                <h1 class="p-2 text-xs xl:text-sm">TallstackUI</h1>
+                            </div>
+                            <div class="bg-white shadow-xl bg-opacity-60 inline-flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/tailwindcss.png" class="w-14 h-10">
+                                <h1 class="p-2 text-xs xl:text-sm">Tailwind CSS</h1>
+                            </div>
+                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/powergrid.png" class="w-12 h-12">
+                                <h1 class="p-2 text-xs xl:text-sm">PowerGrid</h1>
+                            </div>
+                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/javascript.png" class="w-14 h-14">
+                                <h1 class="p-2 text-xs xl:text-sm">JavaScript</h1>
+                            </div>
+                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/alpine.png" class="w-14 h-14">
+                                <h1 class="p-2 text-xs xl:text-sm">AlpineJs</h1>
+                            </div>
+                            <div class="bg-white shadow-xl justify-center bg-opacity-60 inline-flex items-center hover:scale-110 backdrop-blur-3xl rounded-sm w-full p-0.5 md:p-1">
+                                <img src="img/volt.png" class="w-12 h-12">
+                                <h1 class="p-2 text-xs xl:text-sm">Volt</h1>
                             </div>
                         </div>
                     </div>                   
