@@ -353,7 +353,7 @@
                     <b class="text-teal-500">My</b> <b>Experience</b>
                 </h1>
                 <div class="grid animate-up grid-cols-1 xl:grid-cols-2">
-                    <div x-data="{ hovered: null }" class="p-2 md:p-4 hidden flex flex-col w-full space-y-2">
+                    <div x-data="{ hovered: null }" class="p-2 md:p-4 flex flex-col w-full space-y-2">
                         <div 
                             @mouseenter="hovered = 1" @mouseleave="hovered = null"
                             :class="{ 'opacity-40': hovered && hovered !== 1 }" 
