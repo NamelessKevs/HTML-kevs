@@ -383,7 +383,7 @@
                                 @mouseenter="hovered = index" 
                                 @mouseleave="hovered = null"
                                 :class="{ 'opacity-40': hovered !== null && hovered !== index }" 
-                                class="bg-gray-100 shadow-xl hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm p-4"
+                                class="bg-gray-400 shadow-xl hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm p-4"
                             >
                                 <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max" x-text="experience.date"></h1>
                                 <h3 class="text-sm xl:text-base italic" x-text="experience.role"></h3>
@@ -395,13 +395,13 @@
                         </template>
                     </div>
                     
-                    <!-- <div class="p-2 md:p-4 space-y-4 text-center">
+                    <div class="p-2 md:p-4 space-y-4 text-center">
                         <h1 class="text-sm md:text-xl font-extrabold text-white animate-up">
                             <span class="text-teal-500">Primary</span> Tools
                         </h1>
                         <div class="flex flex-col md:flex-row w-full gap-2">
                             <template x-for="tool in tools" :key="tool.name">
-                                <div class="bg-white shadow-xl bg-opacity-60 flex flex-col justify-center hover:scale-110 backdrop-blur-3xl rounded-sm p-3 w-full">
+                                <div class="bg-gray-400 shadow-xl flex flex-col justify-center hover:scale-110 backdrop-blur-3xl rounded-sm p-3 w-full">
                                     <img :src="tool.icon" class="w-16 h-16 mx-auto">
                                     <h1 class="text-xs xl:text-sm mt-2" x-text="tool.name"></h1>
                                 </div>
@@ -415,13 +415,13 @@
                         </h1>
                         <div class="grid grid-cols-3 gap-2">
                             <template x-for="skill in skills" :key="skill.name">
-                                <div class="bg-white shadow-xl bg-opacity-60 flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm p-1">
+                                <div class="bg-gray-400 shadow-xl flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm p-1">
                                     <img :src="skill.icon" class="w-12 h-12">
                                     <h1 class="text-xs xl:text-sm ml-2" x-text="skill.name"></h1>
                                 </div>
                             </template>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>                
