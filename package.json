@@ -1,0 +1,27 @@
+{
+  "name": "html-kevs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./css/app.css -o ./css/output.css --minify",
+    "watch": "tailwindcss -i ./css/app.css -o ./css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NamelessKevs/HTML-kevs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NamelessKevs/HTML-kevs/issues"
+  },
+  "homepage": "https://github.com/NamelessKevs/HTML-kevs#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14"
+  }
+}
