@@ -348,7 +348,7 @@
             </div>
         </div>
         
-        <div id="experience" class="mx-auto" x-data="{ 
+        <div id="experience" class="mx-auto main-content-section" x-data="{ 
             tools: [
                 { name: 'Visual Studio Code', icon: 'img/vsc.svg' },
                 { name: 'Laragon', icon: 'img/lrg.svg' },
@@ -366,12 +366,12 @@
                 { name: 'Volt', icon: 'img/v.svg' }
             ],
             experiences: [
-                { date: 'Jan 2020 - Feb 2020', role: 'Encoder (Intern)', company: 'Shinkozan Corporation', link: 'https://www.shinkozan.com/', location: 'Hong Chang Compound, Rd. Astro, Carmona, 4116 Cavite' },
-                { date: 'Aug 2023 - Sep 2023', role: 'Programmer (Intern)', company: 'GMA Municipal Hall - ICT', link: 'https://genmarianoalvarez.gov.ph/', location: '4117 Congressional Rd, General Mariano Alvarez, Cavite' },
-                { date: 'Aug 2024 - Present', role: 'IT Programmer', company: 'Betafoam Corporation', link: 'https://www.betafoam.ph/', location: 'Blk 12 Lot 5 Dasma Technopark, Dasmariñas, 4114 Cavite' }
+                { date: 'Jan 2020 - Feb 2020', role: 'Encoder (Intern)', company: 'Shinkozan Corporation', location: 'Hong Chang Compound, Rd. Astro, Carmona, 4116 Cavite' },
+                { date: 'Aug 2023 - Sep 2023', role: 'Programmer (Intern)', company: 'GMA Municipal Hall - ICT', location: '4117 Congressional Rd, General Mariano Alvarez, Cavite' },
+                { date: 'Aug 2024 - Present', role: 'IT Programmer', company: 'Betafoam Corporation', location: 'Blk 12 Lot 5 Dasma Technopark, Dasmariñas, 4114 Cavite' }
             ]
         }">
-            <div class="pt-8 md:pt-20 space-y-4 mb-4 md:mb-20">
+            <div class="pt-8 md:pt-20 animate-up space-y-4 mb-4 md:mb-20">
                 <h1 class="text-lg md:text-6xl text-center font-extrabold text-white">
                     <span class="text-teal-500">My</span> Experience
                 </h1>
@@ -388,7 +388,7 @@
                                 <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max" x-text="experience.date"></h1>
                                 <h3 class="text-sm xl:text-base italic" x-text="experience.role"></h3>
                                 <h1 class="pt-2 font-bold text-sm xl:text-base">
-                                    <a :href="experience.link" target="_blank" x-text="experience.company"></a>
+                                    <p x-text="experience.company"></p>
                                 </h1>
                                 <p class="text-sm xl:text-base" x-text="experience.location"></p>
                             </div>
