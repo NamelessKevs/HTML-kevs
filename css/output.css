@@ -1284,24 +1284,14 @@ video {
   color: rgb(20 184 166 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-teal-700 {
-  --tw-text-opacity: 1;
-  color: rgb(15 118 110 / var(--tw-text-opacity));
-}
-
-.text-teal-400 {
-  --tw-text-opacity: 1;
-  color: rgb(45 212 191 / var(--tw-text-opacity));
-}
-
 .text-teal-800 {
   --tw-text-opacity: 1;
   color: rgb(17 94 89 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .antialiased {
@@ -1396,7 +1386,7 @@ video {
 }
 
 * {
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 html {
@@ -1465,9 +1455,34 @@ button {
   /* Fade and slide in */
 }
 
+.button-info {
+  position: absolute;
+  right: 22px;
+  margin-top: 115px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .button-info {
+    position: absolute;
+    right: 10px;
+    margin-top: 130px;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+}
+
 button:hover .button-text {
   transform: translateX(-8px);
   /* Move text to the left */
+}
+
+.hideme {
+  position: relative;
+  bottom: 35px;
 }
 
 button:hover .hideme {
@@ -1483,9 +1498,12 @@ button:hover .bg-transition {
 
 button:hover .button-icon {
   opacity: 1;
-  /* Show icon on hover */
   transform: translateX(0);
-  /* Slide into view */
+}
+
+button:hover .button-info {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 [x-cloak] {
@@ -1634,14 +1652,10 @@ button:hover .button-icon {
 
 .highlighted-text {
   background-color: white;
-  /* Background color for the text */
   display: inline-block;
-  /* Ensures the background is only around the text */
   padding: 5px;
   margin-left: 10px;
-  /* Optional: adds space between the text and the background */
   border-radius: 4px;
-  /* Optional: rounds the corners of the background */
 }
 
 .hover\:scale-110:hover {
