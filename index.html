@@ -376,7 +376,7 @@
                     <span class="text-teal-500">My</span> Experience
                 </h1>
                 
-                <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 border-2 border-white xl:grid-cols-2 gap-4">
                     <div x-data="{ hovered: null }" class="p-2 md:p-4 space-y-4">
                         <template x-for="(experience, index) in experiences" :key="index">
                             <div 
@@ -399,15 +399,17 @@
                         <h1 class="text-sm md:text-xl font-extrabold text-white animate-up">
                             <span class="text-teal-500">Primary</span> Tools
                         </h1>
-                        <div class="flex flex-col md:flex-row w-full gap-2">
-                            <template x-for="tool in tools" :key="tool.name">
-                                <div class="bg-gray-400 shadow-xl flex flex-col justify-center hover:scale-110 backdrop-blur-3xl rounded-sm p-3 w-full">
-                                    <img :src="tool.icon" class="w-16 h-16 mx-auto">
-                                    <h1 class="text-xs xl:text-sm mt-2" x-text="tool.name"></h1>
-                                </div>
-                            </template>
-                        </div>
-                        
+                        <table class="table-auto mx-auto w-max">
+                            <thead></thead>
+                            <tbody>
+                                <template x-for="tool in tools" :key="tool.name">
+                                    <tr class="p-1">
+                                        <td><img :src="tool.icon" class="w-12 h-12"></td>
+                                        <td class="text-sm xl:text-base text-white" x-text="tool.name"></td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
                         <div class="bg-teal-400 h-2 my-2"></div>
                         
                         <h1 class="text-sm md:text-xl font-extrabold text-white animate-up">
@@ -415,9 +417,9 @@
                         </h1>
                         <div class="grid grid-cols-3 gap-2">
                             <template x-for="skill in skills" :key="skill.name">
-                                <div class="bg-gray-400 shadow-xl flex items-center justify-center hover:scale-110 backdrop-blur-3xl rounded-sm p-1">
+                                <div class="flex items-center justify-center p-1">
                                     <img :src="skill.icon" class="w-12 h-12">
-                                    <h1 class="text-xs xl:text-sm ml-2" x-text="skill.name"></h1>
+                                    <h1 class="text-xs xl:text-sm ml-2 text-white" x-text="skill.name"></h1>
                                 </div>
                             </template>
                         </div>
