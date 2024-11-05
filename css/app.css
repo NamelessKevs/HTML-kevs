@@ -12,8 +12,7 @@ html {
     left: 0; /* Align it to the left */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    z-index: 1; /* Lower than main content */
-    background: rgba(255, 255, 255, 0.1); /* Example: light background with transparency */
+    z-index: 1; /* Lower than main content */ /* Example: light background with transparency */
 }
 
 button {
