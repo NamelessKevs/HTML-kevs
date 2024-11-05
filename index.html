@@ -406,7 +406,7 @@
                             <tbody>
                                 <template x-for="tool in tools" :key="tool.name">
                                     <tr class="p-1">
-                                        <td><img loading="lazy" :src="tool.icon" class="w-12 h-12"></td>
+                                        <td><img :src="tool.icon" class="w-12 h-12"></td>
                                         <td class="text-sm xl:text-base text-white" x-text="tool.name"></td>
                                     </tr>
                                 </template>
@@ -422,7 +422,7 @@
                         <div class="grid grid-cols-3 gap-2">
                             <template x-for="skill in skills" :key="skill.name">
                                 <div class="flex items-center justify-center p-1">
-                                    <img loading="lazy" :src="skill.icon" class="w-12 h-12">
+                                    <img :src="skill.icon" class="w-12 h-12">
                                     <h1 class="text-xs xl:text-sm ml-2 text-white" x-text="skill.name"></h1>
                                 </div>
                             </template>
