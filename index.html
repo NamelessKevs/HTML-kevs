@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KRT</title>
-        <link rel="icon" href="img/logo.png" /> <!-- Ensure this path is correct -->
+        <title>Kevs - Developer</title>
+        <link rel="icon" href="img/krt.svg" /> <!-- Ensure this path is correct -->
         <link href="css/output.css" rel="stylesheet"> <!-- Link to the generated output.css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -23,11 +23,10 @@
 
     <!-- Header Section -->
     <header>
-        <div class="fixed top-0 z-30 w-full px-2 md:px-5 py-3 md:py-6 font-mono text-2xl text-gray-200 bg-gray-700 shadow-xl bg-opacity-30 backdrop-blur-lg" x-data="{ open: false }">
+        <div class="fixed top-0 z-30 w-full px-2 md:px-5 py-2 md:py-0.5 font-mono text-2xl text-gray-200 bg-gray-700 shadow-xl bg-opacity-30 backdrop-blur-lg" x-data="{ open: false }">
             <div class="flex items-center justify-between">
                 <div class="inline-flex items-center pl-[5%]">
-                    <img src="img/logo.png" alt="KevsWeb Logo" class="w-6 h-6 md:w-10 md:h-10">
-                    <b class="text-lg md:text-4xl">KRT</b>
+                    <img src="img/krt.svg" alt="KevsWeb Logo" class="w-16 h-12 md:w-24 md:h-20">
                 </div>
                 <!-- Burger button for medium screens -->
                 <div class="lg:hidden">
@@ -279,7 +278,7 @@
                 </table>
                 <div class="flex flex-row space-x-0.5 md:space-x-2">
                     <div class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
-                        <a class="flex items-center" href="https://drive.google.com/file/d/12s46Zxyo17vGmtnGmTfmJSTlLEAgBVcK/view?usp=drive_link" target="_blank">
+                        <a class="flex items-center" href="file/CV_TalisicKevinRey.pdf" target="_blank">
                             <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[8px] md:text-base text-white rounded-xl hover:text-gray-800 group">
                                 <span class="button-text">CV&nbsp;</span>
                                 <span class="bg-transition"></span>
@@ -288,7 +287,7 @@
                         </a>
                     </div>
                     <div class="md:p-1 border-2 border-white animate-up rounded-xl h-max w-max">
-                        <a class="flex items-center" href="https://drive.google.com/file/d/1XklbQQ8UNNMr3PFZT89i-sO44mdE7dCr/view?usp=drive_link" target="_blank">
+                        <a class="flex items-center" href="file/Resume_TalisicKevinRey.pdf" target="_blank">
                             <button class="relative overflow-hidden px-3 py-1 md:px-5 md:py-2 text-[8px] md:text-base text-white rounded-xl hover:text-gray-800 group">
                                 <span class="button-text">Resume&nbsp;</span>
                                 <span class="bg-transition"></span>
@@ -442,7 +441,7 @@
                     loadingScreen.style.display = 'none';
                     setupIntersectionObserver();
                 }, 1000);
-            }, 100);
+            }, 2000);
     
             function setupIntersectionObserver() {
                 const observerOptions = {
@@ -476,7 +475,8 @@
             "Building the magic for you...",
             "Just a moment, getting things ready...",
             "Almost there, hold on tight!",
-            "Planning, Designing, Coding, DEVELOPING!"
+            "Planning, Designing, Coding, DEVELOPING!",
+            "Generating Design and Function to run..."
         ];
 
         window.addEventListener('load', () => {
