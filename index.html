@@ -349,6 +349,11 @@
         </div>
         
         <div id="experience" class="mx-auto main-content-section" x-data="{ 
+            experiences: [
+                { date: 'Jan 2020 - Feb 2020', role: 'Encoder (Intern)', company: 'Shinkozan Corporation', location: 'Hong Chang Compound, Rd. Astro, Carmona, 4116 Cavite' },
+                { date: 'Aug 2023 - Sep 2023', role: 'Programmer (Intern)', company: 'GMA Municipal Hall - ICT', location: '4117 Congressional Rd, General Mariano Alvarez, Cavite' },
+                { date: 'Aug 2024 - Present', role: 'IT Programmer', company: 'Betafoam Corporation', location: 'Blk 12 Lot 5 Dasma Technopark, Dasmariñas, 4114 Cavite' }
+            ],
             tools: [
                 { name: 'Visual Studio Code', icon: 'img/vsc.svg' },
                 { name: 'Laragon', icon: 'img/lrg.svg' },
@@ -365,42 +370,38 @@
                 { name: 'AlpineJs', icon: 'img/alpjs.svg' },
                 { name: 'Volt', icon: 'img/v.svg' }
             ],
-            experiences: [
-                { date: 'Jan 2020 - Feb 2020', role: 'Encoder (Intern)', company: 'Shinkozan Corporation', location: 'Hong Chang Compound, Rd. Astro, Carmona, 4116 Cavite' },
-                { date: 'Aug 2023 - Sep 2023', role: 'Programmer (Intern)', company: 'GMA Municipal Hall - ICT', location: '4117 Congressional Rd, General Mariano Alvarez, Cavite' },
-                { date: 'Aug 2024 - Present', role: 'IT Programmer', company: 'Betafoam Corporation', location: 'Blk 12 Lot 5 Dasma Technopark, Dasmariñas, 4114 Cavite' }
-            ]
+            hovered: null
         }">
             <div class="pt-8 md:pt-20 animate-up space-y-4 mb-4 md:mb-20">
                 <h1 class="text-lg md:text-6xl text-center font-extrabold text-white">
                     <span class="text-teal-500">My</span> Experience
                 </h1>
-                
+        
                 <div class="grid grid-cols-1 border-2 border-white xl:grid-cols-2 gap-4">
-                    <div x-data="{ hovered: null }" class="p-2 md:p-4 space-y-4">
+                    <!-- Experiences Section -->
+                    <div class="p-2 md:p-4">
                         <template x-for="(experience, index) in experiences" :key="index">
                             <div 
                                 @mouseenter="hovered = index" 
                                 @mouseleave="hovered = null"
                                 :class="{ 'opacity-40': hovered !== null && hovered !== index }" 
-                                class="bg-gray-400 shadow-xl hover:scale-110 transition-transform duration-300 backdrop-blur-3xl rounded-sm p-4"
+                                class="bg-gray-400 shadow-xl transition-transform duration-200 backdrop-blur-3xl p-4"
                             >
                                 <h1 class="p-2 bg-teal-600 text-sm xl:text-base text-white rounded-xl w-max" x-text="experience.date"></h1>
                                 <h3 class="text-sm xl:text-base italic" x-text="experience.role"></h3>
-                                <h1 class="pt-2 font-bold text-sm xl:text-base">
-                                    <p x-text="experience.company"></p>
-                                </h1>
+                                <h1 class="pt-2 font-bold text-sm xl:text-base" x-text="experience.company"></h1>
                                 <p class="text-sm xl:text-base" x-text="experience.location"></p>
                             </div>
                         </template>
                     </div>
-                    
+        
+                    <!-- Tools and Skills Section -->
                     <div class="p-2 md:p-4 space-y-4 text-center">
+                        <!-- Tools -->
                         <h1 class="text-sm md:text-xl font-extrabold text-white animate-up">
                             <span class="text-teal-500">Primary</span> Tools
                         </h1>
                         <table class="table-auto mx-auto w-max">
-                            <thead></thead>
                             <tbody>
                                 <template x-for="tool in tools" :key="tool.name">
                                     <tr class="p-1">
@@ -410,8 +411,10 @@
                                 </template>
                             </tbody>
                         </table>
+        
                         <div class="bg-teal-400 h-2 my-2"></div>
-                        
+        
+                        <!-- Skills -->
                         <h1 class="text-sm md:text-xl font-extrabold text-white animate-up">
                             <span class="text-teal-500">Development</span> Skills
                         </h1>
@@ -426,7 +429,7 @@
                     </div>
                 </div>
             </div>
-        </div>                
+        </div>                                
     </div>
     <script>
         window.addEventListener('load', function () {
